@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Franco Beats</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        /* Main HeadBar */
+        .headbar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background-color: #1a1a1a;
+        }
+
+        .headbar h1 {
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #ffffff;
+            /* text white */
+        }
+
+        .headbar img {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #ffffff;
+            /* solid white border */
+        }
+
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e1e1e;
+            padding: 20px;
+            gap: 50px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Beats Grid */
+        .beats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            /* Center beats if less than 4 in row */
+        }
+
+        .beat-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #1a1a1a;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .beat-card img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .beat-card p {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .beat-card:hover {
+            transform: translateY(-5px);
+            background-color: #2a2a2a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .headbar img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .headbar h1 {
+                font-size: 28px;
+            }
+        }
+      <nav>
+  <a href="beats.html" class="active">BEATS</a>
+  <a href="license.html">LICENSE INFO</a>
+</nav>
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Main HeadBar -->
+    <div class="headbar">
+        <img src="francovisionicon.png" alt="Franco Vision Logo">
+        <h1>Franco Vision</h1>
+    </div>
+
+    <!-- Navbar -->
+    <nav>
+  <a href="beats.html" class="active">BEATS</a>
+  <a href="license.html">LICENSE INFO</a>
+</nav>
+
+
+    <!-- Main Content -->
+    <main>
+        <section id="beats" class="beats-row">
+            <div class="beat-card">
+                <img src="beaticon.png">
+                <p>Beat 1</p>
+            </div>
+            <div class="beat-card">
+                <img src="beaticon.png">
+                <p>Beat 2</p>
+            </div>
+            <div class="beat-card">
+                <img src="beaticon.png">
+                <p>Beat 3</p>
+            </div>
+            <div class="beat-card">
+                <img src="beaticon.png">
+                <p>Beat 4</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
