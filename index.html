@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Franco Vision</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        /* Main HeadBar */
+        .headbar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background-color: #1a1a1a;
+        }
+
+        .headbar h1 {
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        .headbar img {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #ffffff;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e1e1e;
+            padding: 20px;
+            gap: 50px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+            padding-bottom: 6px;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        /* Active page underline */
+        nav a.active {
+            border-bottom: 3px solid #ffffff;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        main h1 {
+            font-size: 42px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .headbar img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .headbar h1 {
+                font-size: 28px;
+            }
+
+            main h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main HeadBar -->
+    <div class="headbar">
+        <img src="francovisionicon.png" alt="Franco Vision Logo">
+        <h1>Franco Vision</h1>
+    </div>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html" class="active">HOME</a>
+        <a href="beats.html">BEATS</a>
+        <a href="license.html">LICENSE INFO</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Franco Vision. Buy Beats Here.</h1>
+    </main>
+
+</body>
+
+</html>
