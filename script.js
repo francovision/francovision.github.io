@@ -42,8 +42,9 @@ const beatsDatabase = [
     }
 ];
 
-// Function to open dynamic beat page
+// Function to open dynamic beat page using query param
 function goToBeat(internalName) {
-    localStorage.setItem("selectedBeat", internalName);
-    window.location.href = "beatname.html";
+    // Navigate to beatname.html with ?beat=internalName
+    window.location.href = `beatname.html?beat=${internalName}`;
 }
+
