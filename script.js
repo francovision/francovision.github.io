@@ -1,7 +1,7 @@
 // Database of beats
 const beatsDatabase = [
     {
-        internalName: "trapbrassbeat",
+        internalName: "beat1",
         displayName: "Trap Brass Beat",
         beatPic: "trapbrassbeaticon.jpg",
         previewSrc: "Trap_Brass_Beat.mp3",
