@@ -1,10 +1,10 @@
 // Database of beats
 const beatsDatabase = [
     {
-        internalName: "beat1",
-        displayName: "Beat 1",
+        internalName: "trapbrassbeat",
+        displayName: "Trap Brass Beat",
         beatPic: "Beaticon.png",
-        previewSrc: "beat1_preview.mp3",
+        previewSrc: "Trap_Brass_Beat.mp3",
         cost: "free",
         licenses: [
             { name: "Unlimited License", key: "G# Minor", bpm: "117" }
