@@ -13,7 +13,12 @@
         .license-card { background: #1a1a1a; padding: 15px; border-radius: 10px; width: 250px; text-align: left; }
         .license-name { font-weight: bold; font-size: 18px; }
         .license-key { font-size: 14px; color: #b0b0b0; }
-        .preview-player { margin-bottom: 20px; }
+        .preview-player {
+    display: flex;
+    justify-content: center; /* center the audio player */
+    margin: 20px 0;
+}
+
         .download { background: #f39c12; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; }
     </style>
 </head>
@@ -72,7 +77,7 @@
         const previewPlayer = document.getElementById("previewPlayer");
         if (beat.previewSrc) {
             previewPlayer.src = beat.previewSrc;
-            previewPlayer.style.display = "block";
+            previewPlayer.style.display = "";
         } else {
             previewPlayer.style.display = "none";
         }
