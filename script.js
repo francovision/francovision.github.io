@@ -3,7 +3,7 @@ const beatsDatabase = [
     {
         internalName: "trapbrassbeat",
         displayName: "Trap Brass Beat",
-        beatPic: "Beaticon.png",
+        beatPic: "trapbrassbeaticon.jpg",
         previewSrc: "Trap_Brass_Beat.mp3",
         cost: "free",
         licenses: [
