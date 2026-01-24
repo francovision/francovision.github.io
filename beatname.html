@@ -31,11 +31,12 @@
     </div>
 
     <div id="downloadContainer"></div>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 <script>
-    // Get the selected beat from localStorage
-    const internalName = localStorage.getItem("selectedBeat");
+    // Get the beat from URL query param instead of localStorage
+    const urlParams = new URLSearchParams(window.location.search);
+    const internalName = urlParams.get("beat"); // get beat=internalName
+
     const beat = beatsDatabase.find(b => b.internalName === internalName);
 
     if (!beat) {
@@ -47,7 +48,7 @@
 
         // Render licenses
         const licensesDiv = document.getElementById("licenses");
-        licensesDiv.innerHTML = ""; // clear any existing
+        licensesDiv.innerHTML = ""; // clear existing
         if (beat.licenses && beat.licenses.length > 0) {
             beat.licenses.forEach(l => {
                 const card = document.createElement("div");
@@ -70,20 +71,19 @@
         }
 
         // Render download / DM info
-const downloadDiv = document.getElementById("downloadContainer");
-downloadDiv.innerHTML = ""; // clear existing
+        const downloadDiv = document.getElementById("downloadContainer");
+        downloadDiv.innerHTML = ""; // clear existing
 
-if (beat.cost && beat.cost.toLowerCase() === "free") {
-    // Free: show download button + "Free" text
-    downloadDiv.innerHTML = `
-        <a class="download" href="${beat.previewSrc}" download>Download</a>
-        <p style="margin-top:10px; color:#f39c12; font-weight:bold;">Free</p>
-    `;
-} else if (beat.cost) {
-    // Paid: show DM + cost
-    downloadDiv.innerHTML = `<p>DM @mrfrancoofficial to buy — ${beat.cost}</p>`;
-}
-
+        if (beat.cost && beat.cost.toLowerCase() === "free") {
+            // Free: show download button + "Free" text
+            downloadDiv.innerHTML = `
+                <a class="download" href="${beat.previewSrc}" download>Download</a>
+                <p style="margin-top:10px; color:#f39c12; font-weight:bold;">Free</p>
+            `;
+        } else if (beat.cost) {
+            // Paid: show DM + cost
+            downloadDiv.innerHTML = `<p>DM @mrfrancoofficial to buy — ${beat.cost}</p>`;
+        }
     }
 </script>
 
