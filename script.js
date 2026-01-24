@@ -7,7 +7,7 @@ const beatsDatabase = [
         previewSrc: "beat1_preview.mp3",
         cost: "free",
         licenses: [
-            { name: "unlimited", key: "blah blah" }
+            { name: "Unlimited License", key: "G# Minor", bpm: "117" }
         ]
     },
     {
@@ -17,7 +17,7 @@ const beatsDatabase = [
         previewSrc: "beat2_preview.mp3",
         cost: "free",
         licenses: [
-            { name: "unlimited", key: "blah blah" }
+            { name: "Unlimited License", key: "none", bpm: "none" }
         ]
     },
     {
@@ -27,7 +27,7 @@ const beatsDatabase = [
         previewSrc: "beat3_preview.mp3",
         cost: "free",
         licenses: [
-            { name: "unlimited", key: "blah blah" }
+            { name: "Unlimited License", key: "none", bpm: "none" }
         ]
     },
     {
@@ -37,7 +37,7 @@ const beatsDatabase = [
         previewSrc: "beat4_preview.mp3",
         cost: "free",
         licenses: [
-            { name: "unlimited", key: "blah blah" }
+            { name: "Unlimited License", key: "none", bpm: "none" }
         ]
     }
 ];
