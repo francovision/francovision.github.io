@@ -51,14 +51,15 @@
         licensesDiv.innerHTML = ""; // clear existing
         if (beat.licenses && beat.licenses.length > 0) {
             beat.licenses.forEach(l => {
-                const card = document.createElement("div");
-                card.className = "license-card";
-                card.innerHTML = `
-                    <div class="license-name">${l.name}</div>
-                    <div class="license-key">Key: ${l.key}</div>
-                `;
-                licensesDiv.appendChild(card);
-            });
+    const card = document.createElement("div");
+    card.className = "license-card";
+    card.innerHTML = `
+        <div class="license-name">${l.name}</div>
+        <div class="license-key">Key: ${l.key} <span style="color:#888; font-size:12px;">BPM: ${l.bpm}</span></div>
+    `;
+    licensesDiv.appendChild(card);
+});
+
         }
 
         // Render preview player
