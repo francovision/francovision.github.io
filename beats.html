@@ -69,6 +69,7 @@
             font-size: 18px;
             letter-spacing: 1px;
             transition: color 0.2s;
+            padding-bottom: 6px;
         }
 
         nav a:hover {
@@ -84,6 +85,11 @@
             max-width: 1200px;
             margin: 40px auto;
             padding: 0 20px;
+            text-align: center;
+        }
+        
+        main h1 {
+          padding-bottom: 75px;
         }
 
         /* Beats Grid */
@@ -162,24 +168,29 @@
 
     <!-- Main Content -->
     <main>
+      
+      <h1>Beats</h1>
+      
         <section id="beats" class="beats-row">
-            <div class="beat-card">
-                <img src="Beaticon.png">
-                <p>Beat 1</p>
-            </div>
-            <div class="beat-card">
-                <img src="Beaticon.png">
-                <p>Beat 2</p>
-            </div>
-            <div class="beat-card">
-                <img src="Beaticon.png">
-                <p>Beat 3</p>
-            </div>
-            <div class="beat-card">
-                <img src="Beaticon.png">
-                <p>Beat 4</p>
-            </div>
-        </section>
+    <div class="beat-card" onclick="goToBeat('beat1')">
+        <img src="Beaticon.png">
+        <p>Beat 1</p>
+    </div>
+    <div class="beat-card" onclick="goToBeat('beat2')">
+        <img src="Beaticon.png">
+        <p>Beat 2</p>
+    </div>
+    <div class="beat-card" onclick="goToBeat('beat3')">
+        <img src="Beaticon.png">
+        <p>Beat 3</p>
+    </div>
+    <div class="beat-card" onclick="goToBeat('beat4')">
+        <img src="Beaticon.png">
+        <p>Beat 4</p>
+    </div>
+</section>
+<script src="script.js"></script>
+
     </main>
 
 </body>
